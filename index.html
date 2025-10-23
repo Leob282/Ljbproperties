@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
+    
   </head>
   <body>    
     <!-- Hero section -->
@@ -158,12 +157,12 @@
               </form>
               <div id="status1" class="status"></div>
             </div>
-              <div class="d-flex align-items-center tm-contact-item">
+            <!--  <div class="d-flex align-items-center tm-contact-item">
                 <a href="mailto:info@company.co" class="tm-contact-item-link">
                     <i class="fas fa-3x fa-envelope mr-4"></i>
                     <span class="mb-0">info@ljbproperties.co.uk</span>
                 </a>
-              </div>
+              </div> -->
               
             </div>
         </div>
@@ -183,7 +182,7 @@
     <script>
 
       // Handle Apps Script form submission with AJAX
-document.getElementById('appsScriptForm').addEventListener('submit', function (e) {
+document.getElementById('appscriptForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
             var form = this;
@@ -202,7 +201,7 @@ document.getElementById('appsScriptForm').addEventListener('submit', function (e
                 status.style.display = 'block';
 
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Submit';
+                submitBtn.textContent = 'Send Message';
                 return;
             }
 
@@ -228,7 +227,7 @@ document.getElementById('appsScriptForm').addEventListener('submit', function (e
                 .finally(() => {
                     status.style.display = 'block';
                     submitBtn.disabled = false;
-                    submitBtn.textContent = 'Submit';
+                    submitBtn.textContent = 'Send Message';
                 });
         });
 
