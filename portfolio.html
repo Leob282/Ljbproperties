@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>L&amp;JB Properties - Portfolio</title>
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .tm-navbar {
+        background-color: #15215c !important;
+      }
+      
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      
+      section#about {
+        flex: 1;
+      }
+      
+      .tm-footer {
+        background-color: #15215c;
+        padding: 20px 15px;
+        width: 100%;
+        position: relative;
+        margin-top: auto;
+      }
+      
+      .grid figure figcaption h2 {
+        font-size: 1rem;
+      }
+      
+      .tm-gallery-item-wrapper {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .property-details-btn {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        white-space: nowrap;
+      }
+
+      .tm-gallery-item-wrapper:hover .property-details-btn {
+        opacity: 1;
+      }
+      
+      .tm-gallery-item-wrapper:hover figure.effect-honey img {
+        opacity: 0.5;
+      }
+      
+      .tm-gallery-item-wrapper:hover figure.effect-honey figcaption::before,
+      .tm-gallery-item-wrapper:hover figure.effect-honey h2,
+      .tm-gallery-item-wrapper:hover figure.effect-honey h2 i {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+      
+      .property-details-btn:hover ~ a figure.effect-honey img,
+      .property-details-btn:hover ~ a figure.effect-honey figcaption::before,
+      .property-details-btn:hover ~ a figure.effect-honey h2,
+      .property-details-btn:hover ~ a figure.effect-honey h2 i {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+      
+      .modal-content {
+        background-color: #ffffff;
+        color: #0c2734;
+      }
+      
+      .modal-body {
+        color: #0c2734;
+      }
+      
+      .modal-body p,
+      .modal-body h6,
+      .modal-body ul,
+      .modal-body li {
+        color: #0c2734;
+      }
+      
+      .modal-header {
+        background-color: #15215c;
+        color: #ffffff;
+        border-bottom: 1px solid #15215c;
+      }
+      
+      .modal-header .close {
+        color: #ffffff;
+        opacity: 1;
+      }
+      
+      .modal-title {
+        color: #ffffff;
+      }
+      
+    </style>
+  </head>
+  <body>    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
+      <div class="container">   
+        <div class="tm-next">
+            <a href="#about" class="navbar-brand">
+              <img src="img/ljbproperties.svg" alt="L&amp;JB Properties" style="height:32px; vertical-align:text-bottom"> <span class="ml-2">L&amp;JB Properties</span>
+            </a>
+        </div>             
+          
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars navbar-toggler-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="index.html">About</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link tm-nav-link" href="index.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tm-nav-link current" href="portfolio.html">Portfolio</a>
+        </li>                   
+          </ul>
+        </div>        
+      </div>
+    </nav>
+
+    
+    <section id="about" class="tm-section-pad-top">
+      <div class="container tm-container-gallery">
+        <div class="row">
+          <div class="text-center col-12">
+              <h2 class="tm-text-primary tm-section-title mb-4">Portfolio</h2>
+              <div class="mb-4">
+                <a href="index.html" class="btn tm-btn-primary">Back to Home</a>
+              </div>
+              <p class="mx-auto tm-work-description">
+                L&amp;JB Properties Ltd, is a specialized, family run property company that focuses on investments, lettings and management of property in the South East of England.
+              </p>
+                <br/>
+
+               
+          </div>            
+        </div>
+      </section>
+      <section id="portfolio" class="tm-section-pad-top">
+        <div class="container tm-container-gallery">
+          <div class="row">
+            <div class="col-12">
+                <div class="mx-auto tm-gallery-container">
+                    <div class="grid tm-gallery">
+                      <div class="tm-gallery-item-wrapper">
+                        <a href="img/1.jpg">
+                          <figure class="effect-honey tm-gallery-item">
+                            <img src="img/1_tn.jpg" alt="Large Countryside Home" class="img-fluid">
+                            <figcaption>
+                              <h2><i>Large <span>Countryside</span> Home</i></h2>
+                            </figcaption>
+                          </figure>
+                        </a>
+                        <button type="button" class="btn tm-btn-primary property-details-btn" data-toggle="modal" data-target="#propertyModal1">
+                          View Details
+                        </button>
+                      </div>
+                      
+                      <div class="tm-gallery-item-wrapper">
+                        <a href="img/2.jpg">
+                          <figure class="effect-honey tm-gallery-item">
+                            <img src="img/2_tn.jpg" alt="Small Attached Home" class="img-fluid">
+                            <figcaption>
+                              <h2><i>Small <span>Attached</span> Home</i></h2>
+                            </figcaption>
+                          </figure>
+                        </a>
+                        <button type="button" class="btn tm-btn-primary property-details-btn" data-toggle="modal" data-target="#propertyModal2">
+                          View Details
+                        </button>
+                      </div>
+                      
+                      <div class="tm-gallery-item-wrapper">
+                        <a href="img/3.jpg">
+                          <figure class="effect-honey tm-gallery-item">
+                            <img src="img/3_tn.jpg" alt="Apartment Overlooking A River" class="img-fluid">
+                            <figcaption>
+                              <h2><i>Appartment <span>Overlooking</span> A River</i></h2>
+                            </figcaption>
+                          </figure>
+                        </a>
+                        <button type="button" class="btn tm-btn-primary property-details-btn" data-toggle="modal" data-target="#propertyModal3">
+                          View Details
+                        </button>
+                      </div>
+                      
+                      <div class="tm-gallery-item-wrapper">
+                        <a href="img/4.jpg">
+                          <figure class="effect-honey tm-gallery-item">
+                            <img src="img/4_tn.jpg" alt="Large Plot Of Land" class="img-fluid">
+                            <figcaption>
+                              <h2><i>Large <span>Plot</span> Of Land</i></h2>
+                            </figcaption>
+                          </figure>
+                        </a>
+                        <button type="button" class="btn tm-btn-primary property-details-btn" data-toggle="modal" data-target="#propertyModal4">
+                          View Details
+                        </button>
+                      </div>
+                      
+                      <div class="tm-gallery-item-wrapper">
+                        <a href="img/5.jpg">
+                          <figure class="effect-honey tm-gallery-item">
+                            <img src="img/5_tn.jpg" alt="Cosy Family Home" class="img-fluid">
+                            <figcaption>
+                              <h2><i>Cosy <span>Family</span> Home</i></h2>
+                            </figcaption>
+                          </figure>
+                        </a>
+                        <button type="button" class="btn tm-btn-primary property-details-btn" data-toggle="modal" data-target="#propertyModal5">
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                </div>                
+            </div>        
+          </div>
+        </div>
+      </section>
+
+      <!-- Property Detail Modals -->
+      <!-- Modal 1 -->
+      <div class="modal fade" id="propertyModal1" tabindex="-1" role="dialog" aria-labelledby="propertyModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="propertyModal1Label">Large Countryside Home</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="img/1.jpg" alt="Large Countryside Home" class="img-fluid mb-3">
+              
+              <h6>Property Details</h6>
+              <p><strong>Property Type:</strong> <!-- CHANGE: e.g., Detached House, Semi-Detached, Terraced, Apartment --></p>
+              <p><strong>Bedrooms:</strong> <!-- CHANGE: Number of bedrooms --></p>
+              <p><strong>Bathrooms:</strong> <!-- CHANGE: Number of bathrooms --></p>
+              <p><strong>Reception Rooms:</strong> <!-- CHANGE: Number of reception rooms --></p>
+              <p><strong>Property Size:</strong> <!-- CHANGE: e.g., Square footage or square meters --></p>
+              <p><strong>Location:</strong> <!-- CHANGE: Full address or area name --></p>
+              <p><strong>Price:</strong> <!-- CHANGE: Property price --></p>
+              <p><strong>Property Status:</strong> <!-- CHANGE: e.g., For Sale, For Rent, Sold, Under Offer --></p>
+              
+              <h6 class="mt-4">Description</h6>
+              <p><!-- CHANGE: Detailed property description. Add multiple paragraphs if needed. --></p>
+              
+              <h6 class="mt-4">Key Features</h6>
+              <ul>
+                <li><!-- CHANGE: Feature 1 --></li>
+                <li><!-- CHANGE: Feature 2 --></li>
+                <li><!-- CHANGE: Feature 3 --></li>
+                <li><!-- CHANGE: Feature 4 --></li>
+              </ul>
+              
+              <h6 class="mt-4">Additional Information</h6>
+              <p><strong>Year Built:</strong> <!-- CHANGE: Year property was built --></p>
+              <p><strong>Parking:</strong> <!-- CHANGE: Parking availability --></p>
+              <p><strong>Garden:</strong> <!-- CHANGE: Garden details --></p>
+              <p><strong>Energy Rating:</strong> <!-- CHANGE: Energy efficiency rating --></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 2 -->
+      <div class="modal fade" id="propertyModal2" tabindex="-1" role="dialog" aria-labelledby="propertyModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="propertyModal2Label">Small Attached Home</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="img/2.jpg" alt="Small Attached Home" class="img-fluid mb-3">
+              
+              <h6>Property Details</h6>
+              <p><strong>Property Type:</strong> <!-- CHANGE: e.g., Detached House, Semi-Detached, Terraced, Apartment --></p>
+              <p><strong>Bedrooms:</strong> <!-- CHANGE: Number of bedrooms --></p>
+              <p><strong>Bathrooms:</strong> <!-- CHANGE: Number of bathrooms --></p>
+              <p><strong>Reception Rooms:</strong> <!-- CHANGE: Number of reception rooms --></p>
+              <p><strong>Property Size:</strong> <!-- CHANGE: e.g., Square footage or square meters --></p>
+              <p><strong>Location:</strong> <!-- CHANGE: Full address or area name --></p>
+              <p><strong>Price:</strong> <!-- CHANGE: Property price --></p>
+              <p><strong>Property Status:</strong> <!-- CHANGE: e.g., For Sale, For Rent, Sold, Under Offer --></p>
+              
+              <h6 class="mt-4">Description</h6>
+              <p><!-- CHANGE: Detailed property description. Add multiple paragraphs if needed. --></p>
+              
+              <h6 class="mt-4">Key Features</h6>
+              <ul>
+                <li><!-- CHANGE: Feature 1 --></li>
+                <li><!-- CHANGE: Feature 2 --></li>
+                <li><!-- CHANGE: Feature 3 --></li>
+                <li><!-- CHANGE: Feature 4 --></li>
+              </ul>
+              
+              <h6 class="mt-4">Additional Information</h6>
+              <p><strong>Year Built:</strong> <!-- CHANGE: Year property was built --></p>
+              <p><strong>Parking:</strong> <!-- CHANGE: Parking availability --></p>
+              <p><strong>Garden:</strong> <!-- CHANGE: Garden details --></p>
+              <p><strong>Energy Rating:</strong> <!-- CHANGE: Energy efficiency rating --></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 3 -->
+      <div class="modal fade" id="propertyModal3" tabindex="-1" role="dialog" aria-labelledby="propertyModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="propertyModal3Label">Apartment Overlooking A River</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="img/3.jpg" alt="Apartment Overlooking A River" class="img-fluid mb-3">
+              
+              <h6>Property Details</h6>
+              <p><strong>Property Type:</strong> <!-- CHANGE: e.g., Detached House, Semi-Detached, Terraced, Apartment --></p>
+              <p><strong>Bedrooms:</strong> <!-- CHANGE: Number of bedrooms --></p>
+              <p><strong>Bathrooms:</strong> <!-- CHANGE: Number of bathrooms --></p>
+              <p><strong>Reception Rooms:</strong> <!-- CHANGE: Number of reception rooms --></p>
+              <p><strong>Property Size:</strong> <!-- CHANGE: e.g., Square footage or square meters --></p>
+              <p><strong>Location:</strong> <!-- CHANGE: Full address or area name --></p>
+              <p><strong>Price:</strong> <!-- CHANGE: Property price --></p>
+              <p><strong>Property Status:</strong> <!-- CHANGE: e.g., For Sale, For Rent, Sold, Under Offer --></p>
+              
+              <h6 class="mt-4">Description</h6>
+              <p><!-- CHANGE: Detailed property description. Add multiple paragraphs if needed. --></p>
+              
+              <h6 class="mt-4">Key Features</h6>
+              <ul>
+                <li><!-- CHANGE: Feature 1 --></li>
+                <li><!-- CHANGE: Feature 2 --></li>
+                <li><!-- CHANGE: Feature 3 --></li>
+                <li><!-- CHANGE: Feature 4 --></li>
+              </ul>
+              
+              <h6 class="mt-4">Additional Information</h6>
+              <p><strong>Year Built:</strong> <!-- CHANGE: Year property was built --></p>
+              <p><strong>Parking:</strong> <!-- CHANGE: Parking availability --></p>
+              <p><strong>Garden:</strong> <!-- CHANGE: Garden details --></p>
+              <p><strong>Energy Rating:</strong> <!-- CHANGE: Energy efficiency rating --></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 4 -->
+      <div class="modal fade" id="propertyModal4" tabindex="-1" role="dialog" aria-labelledby="propertyModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="propertyModal4Label">Large Plot Of Land</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="img/4.jpg" alt="Large Plot Of Land" class="img-fluid mb-3">
+              
+              <h6>Property Details</h6>
+              <p><strong>Property Type:</strong> <!-- CHANGE: e.g., Land Plot, Development Site, Agricultural Land --></p>
+              <p><strong>Land Size:</strong> <!-- CHANGE: e.g., Acres, hectares, square meters --></p>
+              <p><strong>Planning Permission:</strong> <!-- CHANGE: e.g., Approved, Pending, None, Outline Planning --></p>
+              <p><strong>Location:</strong> <!-- CHANGE: Full address or area name --></p>
+              <p><strong>Price:</strong> <!-- CHANGE: Property price --></p>
+              <p><strong>Property Status:</strong> <!-- CHANGE: e.g., For Sale, Under Offer, Sold --></p>
+              
+              <h6 class="mt-4">Description</h6>
+              <p><!-- CHANGE: Detailed property description. Add multiple paragraphs if needed. --></p>
+              
+              <h6 class="mt-4">Key Features</h6>
+              <ul>
+                <li><!-- CHANGE: Feature 1 --></li>
+                <li><!-- CHANGE: Feature 2 --></li>
+                <li><!-- CHANGE: Feature 3 --></li>
+                <li><!-- CHANGE: Feature 4 --></li>
+              </ul>
+              
+              <h6 class="mt-4">Additional Information</h6>
+              <p><strong>Access:</strong> <!-- CHANGE: Access details --></p>
+              <p><strong>Services:</strong> <!-- CHANGE: Available services (water, electricity, etc.) --></p>
+              <p><strong>Topography:</strong> <!-- CHANGE: Land topography description --></p>
+              <p><strong>Restrictions:</strong> <!-- CHANGE: Any planning restrictions or covenants --></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 5 -->
+      <div class="modal fade" id="propertyModal5" tabindex="-1" role="dialog" aria-labelledby="propertyModal5Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="propertyModal5Label">Cosy Family Home</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="img/5.jpg" alt="Cosy Family Home" class="img-fluid mb-3">
+              
+              <h6>Property Details</h6>
+              <p><strong>Property Type:</strong> <!-- CHANGE: e.g., Detached House, Semi-Detached, Terraced, Apartment --></p>
+              <p><strong>Bedrooms:</strong> <!-- CHANGE: Number of bedrooms --></p>
+              <p><strong>Bathrooms:</strong> <!-- CHANGE: Number of bathrooms --></p>
+              <p><strong>Reception Rooms:</strong> <!-- CHANGE: Number of reception rooms --></p>
+              <p><strong>Property Size:</strong> <!-- CHANGE: e.g., Square footage or square meters --></p>
+              <p><strong>Location:</strong> <!-- CHANGE: Full address or area name --></p>
+              <p><strong>Price:</strong> <!-- CHANGE: Property price --></p>
+              <p><strong>Property Status:</strong> <!-- CHANGE: e.g., For Sale, For Rent, Sold, Under Offer --></p>
+              
+              <h6 class="mt-4">Description</h6>
+              <p><!-- CHANGE: Detailed property description. Add multiple paragraphs if needed. --></p>
+              
+              <h6 class="mt-4">Key Features</h6>
+              <ul>
+                <li><!-- CHANGE: Feature 1 --></li>
+                <li><!-- CHANGE: Feature 2 --></li>
+                <li><!-- CHANGE: Feature 3 --></li>
+                <li><!-- CHANGE: Feature 4 --></li>
+              </ul>
+              
+              <h6 class="mt-4">Additional Information</h6>
+              <p><strong>Year Built:</strong> <!-- CHANGE: Year property was built --></p>
+              <p><strong>Parking:</strong> <!-- CHANGE: Parking availability --></p>
+              <p><strong>Garden:</strong> <!-- CHANGE: Garden details --></p>
+              <p><strong>Energy Rating:</strong> <!-- CHANGE: Energy efficiency rating --></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer class="text-center small tm-footer">
+        <p class="mb-0">
+          Copyright &copy; 2025 L&amp;JB Properties Ltd.
+          
+        </p>
+    </footer>
+
+    <script src="js/jquery-1.9.1.min.js"></script>     
+    <script src="slick/slick.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>     
+    <script src="js/bootstrap.min.js"></script> 
+    <script>
+
+      function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+
+        if(windowHeight > 500) {
+          _offset = 400;
+        } 
+        if(windowHeight > 680) {
+          _offset = 300
+        }
+        if(windowHeight > 830) {
+          _offset = 210;
+        }
+
+        return _offset;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+
+      // Parallax function
+      // Adapted based on https://codepen.io/roborich/pen/wpAsm        
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){          
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+      
+      $(function(){
+        // Background Parallax (if needed)
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        
+        // Handle window resize
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function(e){          
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          } else {
+            $('.tm-navbar').removeClass("scroll");
+          }
+        });
+        
+        // Close mobile menu after click 
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show'); 
+        })
+
+        // Scroll to corresponding section with animation
+        $('#tmNav').singlePageNav();        
+        
+        // Add smooth scrolling to all links
+        // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 400, function(){
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        // Pop up
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+
+        // Gallery
+        $('.tm-gallery').slick({
+          dots: false,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: true
+            }
+          }
+        ]
+        });
+
+        
+      });
+
+    </script>
+  </body>
+</html>
+
